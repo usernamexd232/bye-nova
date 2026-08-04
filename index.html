@@ -1,115 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Goodbye, Nova Mae 🌷</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Goodbye, Nova Mae 🌷
+    </title>
+
 
     <style>
+
+        /* ========================================
+           RESET
+        ======================================== */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             background: #0f172a;
+
             color: white;
+
             min-height: 100vh;
+
             overflow-x: hidden;
         }
 
-        /* Animated background */
+
+        /* ========================================
+           ANIMATED BACKGROUND
+        ======================================== */
+
         body::before {
+
             content: "";
+
             position: fixed;
+
             inset: 0;
+
             background:
-                radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.25), transparent 30%),
-                radial-gradient(circle at 80% 30%, rgba(139, 92, 246, 0.25), transparent 30%),
-                radial-gradient(circle at 50% 90%, rgba(59, 130, 246, 0.2), transparent 35%);
+
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(236, 72, 153, 0.25),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 80% 30%,
+                    rgba(139, 92, 246, 0.25),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 50% 90%,
+                    rgba(59, 130, 246, 0.20),
+                    transparent 35%
+                );
+
             z-index: -2;
         }
 
+
         .stars {
+
             position: fixed;
+
             inset: 0;
+
             pointer-events: none;
+
             z-index: -1;
+
             overflow: hidden;
         }
 
+
         .star {
+
             position: absolute;
+
             width: 3px;
+
             height: 3px;
+
             background: white;
+
             border-radius: 50%;
+
             opacity: 0.5;
-            animation: twinkle 3s infinite ease-in-out;
+
+            animation:
+                twinkle 3s
+                infinite
+                ease-in-out;
         }
 
+
         @keyframes twinkle {
-            0%, 100% {
+
+            0%,
+            100% {
+
                 opacity: 0.2;
-                transform: scale(1);
+
+                transform:
+                    scale(1);
             }
 
             50% {
+
                 opacity: 1;
-                transform: scale(1.8);
+
+                transform:
+                    scale(1.8);
             }
         }
 
-        /* Main */
+
+        /* ========================================
+           MAIN CONTAINER
+        ======================================== */
+
         .container {
-            width: min(900px, 92%);
+
+            width:
+                min(950px, 92%);
+
             margin: auto;
-            padding: 70px 0;
+
+            padding:
+                60px 0;
         }
 
+
+        /* ========================================
+           HERO
+        ======================================== */
+
         .hero {
+
             text-align: center;
+
             min-height: 90vh;
+
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
+
             align-items: center;
         }
 
+
         .small-text {
+
             color: #f9a8d4;
+
             letter-spacing: 4px;
+
             text-transform: uppercase;
+
             font-size: 13px;
+
             margin-bottom: 20px;
         }
+
 
         h1 {
-            font-size: clamp(45px, 10vw, 90px);
+
+            font-size:
+                clamp(
+                    45px,
+                    10vw,
+                    90px
+                );
+
             line-height: 1;
-            margin-bottom: 20px;
-            background: linear-gradient(
-                90deg,
-                #f9a8d4,
-                #fef3c7,
-                #c4b5fd,
-                #f9a8d4
-            );
+
+            margin-bottom: 25px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #f9a8d4,
+                    #fef3c7,
+                    #c4b5fd,
+                    #f9a8d4
+                );
+
             background-size: 300%;
+
             -webkit-background-clip: text;
+
             background-clip: text;
+
             color: transparent;
-            animation: gradient 6s infinite;
+
+            animation:
+                gradientMove 6s
+                infinite;
         }
 
-        @keyframes gradient {
+
+        @keyframes gradientMove {
+
             0% {
                 background-position: 0%;
             }
@@ -123,496 +244,1523 @@
             }
         }
 
+
         .subtitle {
+
             color: #cbd5e1;
+
             font-size: 18px;
-            max-width: 600px;
-            line-height: 1.7;
+
+            max-width: 650px;
+
+            line-height: 1.8;
         }
 
-        /* Button */
+
+        /* ========================================
+           OPEN BUTTON
+        ======================================== */
+
         .open-btn {
+
             margin-top: 35px;
+
             border: none;
-            padding: 15px 30px;
+
+            padding:
+                15px 30px;
+
             border-radius: 50px;
-            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #ec4899,
+                    #8b5cf6
+                );
+
             color: white;
+
             font-size: 16px;
+
             cursor: pointer;
-            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
-            transition: 0.3s;
+
+            box-shadow:
+
+                0 10px 30px
+                rgba(
+                    236,
+                    72,
+                    153,
+                    0.30
+                );
+
+            transition:
+                0.3s;
         }
+
 
         .open-btn:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 15px 40px rgba(236, 72, 153, 0.45);
+
+            transform:
+                translateY(-4px)
+                scale(1.03);
+
+            box-shadow:
+
+                0 15px 40px
+                rgba(
+                    236,
+                    72,
+                    153,
+                    0.45
+                );
         }
 
-        /* Message */
-        .message {
-            display: none;
-            animation: appear 1s ease;
+
+        .open-btn:active {
+
+            transform:
+                scale(0.97);
         }
+
+
+        /* ========================================
+           MESSAGE
+        ======================================== */
+
+        .message {
+
+            display: none;
+
+            animation:
+                appear 1s ease;
+        }
+
 
         .message.show {
+
             display: block;
         }
 
+
         @keyframes appear {
+
             from {
+
                 opacity: 0;
-                transform: translateY(40px);
+
+                transform:
+                    translateY(40px);
             }
 
             to {
+
                 opacity: 1;
-                transform: translateY(0);
+
+                transform:
+                    translateY(0);
             }
         }
 
+
+        /* ========================================
+           GLASS CARDS
+        ======================================== */
+
         .card {
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(15px);
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.07
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.12
+                );
+
+            backdrop-filter:
+                blur(15px);
+
             border-radius: 25px;
+
             padding: 35px;
+
             margin-bottom: 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-        }
 
-        /* Photo */
-        .photo-container {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid rgba(255,255,255,0.7);
             box-shadow:
-                0 0 0 10px rgba(255,255,255,0.05),
-                0 15px 40px rgba(0,0,0,0.4);
+
+                0 20px 60px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.25
+                );
         }
 
-        .photo-caption {
-            margin-top: 15px;
-            color: #f9a8d4;
-            font-size: 14px;
+
+        /* ========================================
+           INTRO
+        ======================================== */
+
+        .intro {
+
+            text-align: center;
         }
 
-        /* Letter */
-        .letter {
+
+        .intro-icon {
+
+            font-size: 55px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .intro h2 {
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .intro p {
+
+            color: #cbd5e1;
+
             line-height: 1.9;
-            color: #e2e8f0;
+
             font-size: 17px;
         }
 
-        .letter p {
-            margin-bottom: 20px;
-        }
 
-        .highlight {
-            color: #f9a8d4;
-            font-weight: bold;
-        }
+        /* ========================================
+           NOVA PROFILE
+        ======================================== */
 
-        .quote {
-            margin: 30px 0;
-            padding: 25px;
-            border-left: 4px solid #ec4899;
-            background: rgba(236, 72, 153, 0.08);
-            border-radius: 10px;
-            font-size: 20px;
-            font-style: italic;
-            color: #fce7f3;
-        }
+        .nova-profile {
 
-        /* Memories */
-        .memories {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .memory {
-            padding: 25px 15px;
             text-align: center;
-            background: rgba(255,255,255,0.05);
-            border-radius: 18px;
-            transition: 0.3s;
+
+            padding:
+                45px 25px;
         }
 
-        .memory:hover {
-            transform: translateY(-8px);
-            background: rgba(255,255,255,0.1);
+
+        .nova-photo-wrapper {
+
+            width: 220px;
+
+            height: 220px;
+
+            margin:
+                0 auto 25px;
+
+            padding: 6px;
+
+            border-radius: 50%;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #f9a8d4,
+                    #c4b5fd,
+                    #fef3c7,
+                    #f9a8d4
+                );
+
+            background-size: 300%;
+
+            animation:
+                profileGlow 5s
+                infinite;
         }
 
-        .memory .emoji {
-            font-size: 35px;
-            margin-bottom: 12px;
+
+        .nova-photo {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border:
+                5px solid
+                #0f172a;
+
+            display: block;
         }
 
-        .memory h3 {
-            font-size: 15px;
-            margin-bottom: 7px;
+
+        .nova-profile h2 {
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
         }
 
-        .memory p {
-            font-size: 13px;
+
+        .nova-profile p {
+
             color: #94a3b8;
+
+            font-size: 16px;
+
+            line-height: 1.7;
         }
 
-        /* Ending */
-        .ending {
-            text-align: center;
-            padding: 70px 20px;
-        }
 
-        .ending h2 {
-            font-size: clamp(30px, 7vw, 55px);
-            margin-bottom: 20px;
-        }
+        @keyframes profileGlow {
 
-        .heart {
-            font-size: 45px;
-            display: inline-block;
-            animation: heartbeat 1.5s infinite;
-        }
+            0% {
 
-        @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
+                background-position:
+                    0%;
             }
 
             50% {
-                transform: scale(1.2);
+
+                background-position:
+                    100%;
+            }
+
+            100% {
+
+                background-position:
+                    0%;
             }
         }
 
-        .signature {
-            margin-top: 30px;
+
+        /* ========================================
+           GALLERY
+        ======================================== */
+
+        .gallery-title {
+
+            text-align: center;
+
+            margin-bottom: 10px;
+
+            font-size: 30px;
+        }
+
+
+        .gallery-subtitle {
+
+            text-align: center;
+
+            color: #94a3b8;
+
+            margin-bottom: 30px;
+        }
+
+
+        .gallery {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .photo-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 20px;
+
+            aspect-ratio: 4 / 3;
+
+            background:
+                #1e293b;
+
+            cursor: pointer;
+
+            transition:
+                0.35s;
+        }
+
+
+        .photo-card:first-child {
+
+            grid-column:
+                span 2;
+
+            aspect-ratio:
+                16 / 9;
+        }
+
+
+        .photo-card img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                0.5s;
+        }
+
+
+        .photo-card::after {
+
+            content:
+                "✨ Team Memory";
+
+            position: absolute;
+
+            left: 15px;
+
+            bottom: 15px;
+
+            padding:
+                8px 14px;
+
+            border-radius: 30px;
+
+            background:
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.55
+                );
+
+            backdrop-filter:
+                blur(8px);
+
+            font-size: 12px;
+
+            opacity: 0;
+
+            transform:
+                translateY(10px);
+
+            transition:
+                0.3s;
+        }
+
+
+        .photo-card:hover img {
+
+            transform:
+                scale(1.08);
+        }
+
+
+        .photo-card:hover::after {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* ========================================
+           LETTER
+        ======================================== */
+
+        .letter {
+
+            line-height: 1.9;
+
+            color: #e2e8f0;
+
+            font-size: 17px;
+        }
+
+
+        .letter h2 {
+
+            text-align: center;
+
+            margin-bottom: 30px;
+
+            font-size: 30px;
+        }
+
+
+        .letter p {
+
+            margin-bottom: 20px;
+        }
+
+
+        .highlight {
+
             color: #f9a8d4;
+
+            font-weight: bold;
+        }
+
+
+        .quote {
+
+            margin:
+                30px 0;
+
+            padding: 25px;
+
+            border-left:
+                4px solid
+                #ec4899;
+
+            background:
+                rgba(
+                    236,
+                    72,
+                    153,
+                    0.08
+                );
+
+            border-radius: 10px;
+
+            font-size: 20px;
+
+            font-style: italic;
+
+            color: #fce7f3;
+
+            text-align: center;
+        }
+
+
+        /* ========================================
+           MEMORY CARDS
+        ======================================== */
+
+        .memories {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+
+        .memory {
+
+            padding:
+                25px 15px;
+
+            text-align: center;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.05
+                );
+
+            border-radius: 18px;
+
+            transition:
+                0.3s;
+        }
+
+
+        .memory:hover {
+
+            transform:
+                translateY(-8px);
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.10
+                );
+        }
+
+
+        .memory .emoji {
+
+            font-size: 35px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .memory h3 {
+
+            font-size: 15px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .memory p {
+
+            font-size: 13px;
+
+            color: #94a3b8;
+
+            line-height: 1.6;
+        }
+
+
+        /* ========================================
+           FINAL MESSAGE
+        ======================================== */
+
+        .ending {
+
+            text-align: center;
+
+            padding:
+                70px 20px;
+        }
+
+
+        .ending h2 {
+
+            font-size:
+                clamp(
+                    30px,
+                    7vw,
+                    55px
+                );
+
+            margin-bottom: 20px;
+        }
+
+
+        .heart {
+
+            font-size: 45px;
+
+            display: inline-block;
+
+            animation:
+                heartbeat 1.5s
+                infinite;
+        }
+
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+
+                transform:
+                    scale(1);
+            }
+
+            50% {
+
+                transform:
+                    scale(1.2);
+            }
+        }
+
+
+        .signature {
+
+            margin-top: 30px;
+
+            color: #f9a8d4;
+
             font-size: 18px;
         }
 
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
         footer {
+
             text-align: center;
+
             color: #64748b;
+
             font-size: 12px;
+
             padding: 30px;
         }
 
-        /* Confetti */
+
+        /* ========================================
+           CONFETTI
+        ======================================== */
+
         .confetti {
+
             position: fixed;
+
             width: 8px;
+
             height: 12px;
+
             top: -20px;
-            animation: fall 4s linear forwards;
+
+            animation:
+                fall 4s
+                linear
+                forwards;
+
             z-index: 999;
         }
 
+
         @keyframes fall {
+
             to {
-                transform: translateY(110vh) rotate(720deg);
+
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+
                 opacity: 0;
             }
         }
 
-        /* Mobile */
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
         @media (max-width: 650px) {
 
             .container {
-                padding: 40px 0;
+
+                padding:
+                    40px 0;
             }
+
 
             .hero {
-                min-height: 85vh;
+
+                min-height:
+                    85vh;
             }
+
 
             .card {
-                padding: 25px 20px;
+
+                padding:
+                    25px 20px;
             }
+
 
             .letter {
-                font-size: 16px;
+
+                font-size:
+                    16px;
             }
+
+
+            .nova-photo-wrapper {
+
+                width:
+                    180px;
+
+                height:
+                    180px;
+            }
+
+
+            .gallery {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .photo-card:first-child {
+
+                grid-column:
+                    span 1;
+
+                aspect-ratio:
+                    4 / 3;
+            }
+
 
             .memories {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
 
-            .photo {
-                width: 150px;
-                height: 150px;
+
+            .gallery-title {
+
+                font-size:
+                    25px;
             }
+
+
+            .letter h2 {
+
+                font-size:
+                    25px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <div class="stars" id="stars"></div>
+
+    <!-- ========================================
+         ANIMATED STARS
+    ========================================= -->
+
+    <div
+        class="stars"
+        id="stars"
+    ></div>
+
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
 
     <main class="container">
 
-        <!-- HERO -->
+
+        <!-- ========================================
+             HERO SECTION
+        ========================================= -->
+
         <section class="hero">
 
+
             <div class="small-text">
-                A little message for someone special
+
+                From all of us
+
             </div>
 
-            <h1>Goodbye, Nova Mae</h1>
+
+            <h1>
+
+                Goodbye, Nova Mae
+
+            </h1>
+
 
             <p class="subtitle">
-                Some people come into our lives as coworkers,
-                but somehow become part of the memories we will
-                always carry with us.
+
+                A little message from your colleagues,
+                filled with appreciation, memories,
+                laughter, and best wishes for your
+                next chapter.
+
             </p>
 
-            <button class="open-btn" onclick="openMessage()">
-                💌 Open My Message
+
+            <button
+                class="open-btn"
+                onclick="openMessage()"
+            >
+
+                💌 Open Our Message
+
             </button>
+
 
         </section>
 
 
-        <!-- MESSAGE -->
-        <section class="message" id="message">
 
-            <!-- PHOTO -->
-            <div class="card photo-container">
+        <!-- ========================================
+             HIDDEN MESSAGE SECTION
+        ========================================= -->
 
-                <!-- Replace this with your own photo -->
-                <img
-                    src="nova.jpg"
-                    alt="Nova Mae"
-                    class="photo"
-                >
+        <section
+            class="message"
+            id="message"
+        >
 
-                <div class="photo-caption">
-                    One of the people who made work a little brighter ✨
+
+            <!-- ====================================
+                 INTRO
+            ===================================== -->
+
+            <div class="card intro">
+
+
+                <div class="intro-icon">
+
+                    🌷
+
                 </div>
+
+
+                <h2>
+
+                    To Our Dear Nova Mae
+
+                </h2>
+
+
+                <p>
+
+                    Saying goodbye to a colleague
+                    is never easy, especially to someone
+                    who has become part of the everyday
+                    moments that make work more enjoyable.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    Before you start your next chapter,
+                    we wanted to leave you with something
+                    from all of us.
+
+                </p>
+
 
             </div>
 
 
-            <!-- LETTER -->
-            <div class="card letter">
 
-                <p>
-                    Dear <span class="highlight">Nova Mae</span>,
-                </p>
+            <!-- ====================================
+                 NOVA'S MAIN PHOTO
+            ===================================== -->
 
-                <p>
-                    I honestly don't know the perfect words to say goodbye.
-                    It's strange how someone can start as just a coworker,
-                    and eventually become someone whose presence becomes
-                    part of your everyday life.
-                </p>
+            <div class="card nova-profile">
 
-                <p>
-                    Working with you gave us more than just another person
-                    to work with. There were conversations, random laughs,
-                    stressful days, little jokes, and countless ordinary
-                    moments that somehow became meaningful memories.
-                </p>
 
-                <p>
-                    And now that you're moving on to another chapter,
-                    things are going to feel a little different around here.
-                </p>
+                <div class="nova-photo-wrapper">
 
-                <div class="quote">
-                    "Sometimes goodbye isn't the end of a friendship.
-                    It's simply the beginning of wishing someone well
-                    from a little farther away."
+
+                    <img
+                        src="nova.jpg"
+                        alt="Nova Mae Baloyos"
+                        class="nova-photo"
+                    >
+
+
                 </div>
 
-                <p>
-                    I hope wherever life takes you next, you find people
-                    who appreciate you, opportunities that make you grow,
-                    and moments that make you genuinely happy.
-                </p>
+
+                <h2>
+
+                    Nova Mae Baloyos 🌷
+
+                </h2>
+
 
                 <p>
-                    Don't ever underestimate how far you can go.
-                    You've already made it through so many things,
-                    and I believe there are still so many good things
-                    waiting for you.
+
+                    A valued colleague, teammate,
+                    and wonderful part of our team's journey.
+
                 </p>
 
-                <p>
-                    Thank you for the memories, the conversations,
-                    the laughs, and simply for being part of our journey.
-                </p>
-
-                <p>
-                    You will definitely be missed.
-                </p>
 
             </div>
 
 
-            <!-- MEMORIES -->
+
+            <!-- ====================================
+                 TEAM MEMORIES
+            ===================================== -->
+
             <div class="card">
 
-                <h2 style="text-align:center; margin-bottom:25px;">
-                    Things I'll Remember
+
+                <h2 class="gallery-title">
+
+                    Our Memories Together 📸
+
                 </h2>
+
+
+                <p class="gallery-subtitle">
+
+                    Five moments we will always be
+                    happy to remember.
+
+                </p>
+
+
+                <div class="gallery">
+
+
+                    <div class="photo-card">
+
+                        <img
+                            src="1.jpeg"
+                            alt="Nova Mae and the team"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-card">
+
+                        <img
+                            src="2.jpeg"
+                            alt="Nova Mae and the team"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-card">
+
+                        <img
+                            src="3.jpeg"
+                            alt="Nova Mae and the team"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-card">
+
+                        <img
+                            src="4.jpeg"
+                            alt="Nova Mae and the team"
+                        >
+
+                    </div>
+
+
+                    <div class="photo-card">
+
+                        <img
+                            src="5.jpeg"
+                            alt="Nova Mae and the team"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ====================================
+                 TEAM MESSAGE
+            ===================================== -->
+
+            <div class="card letter">
+
+
+                <h2>
+
+                    A Message From Your Colleagues 💌
+
+                </h2>
+
+
+                <p>
+
+                    Dear
+                    <span class="highlight">
+                        Nova Mae
+                    </span>,
+
+                </p>
+
+
+                <p>
+
+                    As you move on to a new chapter,
+                    we just want to take a moment to say
+                    <strong>thank you</strong>.
+
+                </p>
+
+
+                <p>
+
+                    Thank you for being part of our team
+                    and for sharing so many ordinary days
+                    that somehow became memorable.
+                    From busy workdays and stressful moments
+                    to random conversations, jokes, laughter,
+                    and everything in between, those little
+                    moments became part of our team's story.
+
+                </p>
+
+
+                <p>
+
+                    Work isn't always easy, but having good
+                    people around makes the difficult days
+                    lighter. Your presence was one of those
+                    things that made the workplace feel a
+                    little more familiar and a little more
+                    enjoyable.
+
+                </p>
+
+
+                <div class="quote">
+
+                    "Good coworkers become good memories,
+                    and good memories stay with us long
+                    after the work is finished."
+
+                </div>
+
+
+                <p>
+
+                    We are genuinely happy for you as you
+                    begin this new journey. We hope the next
+                    chapter brings you new opportunities,
+                    new experiences, and plenty of reasons
+                    to be proud of yourself.
+
+                </p>
+
+
+                <p>
+
+                    Wherever you go next, we hope you meet
+                    people who appreciate your efforts,
+                    support your dreams, and make you feel
+                    that you're exactly where you're supposed
+                    to be.
+
+                </p>
+
+
+                <p>
+
+                    And even though you won't be working
+                    beside us anymore, the memories we've
+                    made together will always be part of
+                    the team.
+
+                </p>
+
+
+                <p>
+
+                    So this isn't really a goodbye to the
+                    memories. It's simply a
+                    <strong>"see you around"</strong>
+                    and a wish that life treats you kindly
+                    wherever you go.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+
+                        Thank you for being part of our team,
+                        Nova Mae. You will definitely be missed.
+
+                    </strong>
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- ====================================
+                 WHAT WE'LL REMEMBER
+            ===================================== -->
+
+            <div class="card">
+
+
+                <h2
+                    style="
+                        text-align:center;
+                        margin-bottom:25px;
+                    "
+                >
+
+                    What We'll Remember 🌷
+
+                </h2>
+
 
                 <div class="memories">
 
-                    <div class="memory">
-                        <div class="emoji">😂</div>
-                        <h3>The Laughs</h3>
-                        <p>
-                            The random moments that made ordinary
-                            workdays memorable.
-                        </p>
-                    </div>
 
                     <div class="memory">
-                        <div class="emoji">☕</div>
-                        <h3>The Everyday Moments</h3>
+
+
+                        <div class="emoji">
+
+                            😂
+
+                        </div>
+
+
+                        <h3>
+
+                            The Laughter
+
+                        </h3>
+
+
                         <p>
-                            The little conversations and moments
-                            that we didn't know we'd miss.
+
+                            The random jokes and moments
+                            that made ordinary workdays
+                            more fun.
+
                         </p>
+
+
                     </div>
 
+
+
                     <div class="memory">
-                        <div class="emoji">🌷</div>
-                        <h3>Your Presence</h3>
+
+
+                        <div class="emoji">
+
+                            🤝
+
+                        </div>
+
+
+                        <h3>
+
+                            The Teamwork
+
+                        </h3>
+
+
                         <p>
-                            The simple fact that you were there
-                            made the workplace different.
+
+                            The days we helped one another
+                            get through whatever work
+                            brought us.
+
                         </p>
+
+
                     </div>
+
+
+
+                    <div class="memory">
+
+
+                        <div class="emoji">
+
+                            📸
+
+                        </div>
+
+
+                        <h3>
+
+                            The Memories
+
+                        </h3>
+
+
+                        <p>
+
+                            The simple moments that became
+                            memories we'll look back on
+                            someday.
+
+                        </p>
+
+
+                    </div>
+
 
                 </div>
+
 
             </div>
 
 
-            <!-- ENDING -->
+
+            <!-- ====================================
+                 FINAL FAREWELL
+            ===================================== -->
+
             <div class="ending">
 
-                <div class="heart">❤️</div>
 
-                <h2>
-                    Until our paths cross again.
-                </h2>
+                <div class="heart">
 
-                <p class="subtitle">
-                    Wherever life takes you next,
-                    I hope it takes you somewhere beautiful.
-                </p>
+                    ❤️
 
-                <div class="signature">
-                    — From your coworker and friend
                 </div>
 
+
+                <h2>
+
+                    Until We Meet Again
+
+                </h2>
+
+
+                <p class="subtitle">
+
+                    Wherever your next journey takes you,
+                    we wish you nothing but success,
+                    happiness, and wonderful new memories.
+
+                </p>
+
+
+                <div class="signature">
+
+                    — From all of us, your colleagues 🤍
+
+                </div>
+
+
             </div>
+
 
         </section>
 
+
     </main>
 
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
     <footer>
-        Made with appreciation & good memories.
+
+        Made with appreciation, friendship,
+        and good memories.
+
     </footer>
 
 
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
     <script>
 
-        /* Create stars */
-        const stars = document.getElementById("stars");
 
-        for (let i = 0; i < 80; i++) {
+        /* ========================================
+           CREATE STARS
+        ========================================= */
 
-            const star = document.createElement("div");
+        const stars =
+            document.getElementById("stars");
 
-            star.classList.add("star");
 
-            star.style.left = Math.random() * 100 + "%";
-            star.style.top = Math.random() * 100 + "%";
+        for (
+            let i = 0;
+            i < 80;
+            i++
+        ) {
+
+
+            const star =
+                document.createElement("div");
+
+
+            star.classList.add(
+                "star"
+            );
+
+
+            star.style.left =
+                Math.random() * 100 + "%";
+
+
+            star.style.top =
+                Math.random() * 100 + "%";
+
 
             star.style.animationDelay =
                 Math.random() * 3 + "s";
 
-            stars.appendChild(star);
+
+            stars.appendChild(
+                star
+            );
+
         }
 
 
-        /* Open message */
+
+        /* ========================================
+           OPEN MESSAGE
+        ========================================= */
+
         function openMessage() {
 
+
             const message =
-                document.getElementById("message");
+                document.getElementById(
+                    "message"
+                );
 
-            message.classList.add("show");
 
-            setTimeout(() => {
+            message.classList.add(
+                "show"
+            );
 
-                message.scrollIntoView({
-                    behavior: "smooth"
-                });
 
-            }, 100);
+            setTimeout(
+                () => {
+
+                    message.scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+                },
+                100
+            );
+
 
             createConfetti();
+
         }
 
 
-        /* Confetti */
+
+        /* ========================================
+           CREATE CONFETTI
+        ========================================= */
+
         function createConfetti() {
 
+
             const symbols = [
+
                 "❤️",
                 "✨",
                 "🌸",
                 "💗",
                 "⭐",
                 "🌷"
+
             ];
 
-            for (let i = 0; i < 35; i++) {
+
+            for (
+                let i = 0;
+                i < 35;
+                i++
+            ) {
+
 
                 const confetti =
-                    document.createElement("div");
+                    document.createElement(
+                        "div"
+                    );
 
-                confetti.classList.add("confetti");
+
+                confetti.classList.add(
+                    "confetti"
+                );
+
 
                 confetti.innerHTML =
-                    symbols[Math.floor(
-                        Math.random() * symbols.length
-                    )];
+                    symbols[
+                        Math.floor(
+                            Math.random()
+                            *
+                            symbols.length
+                        )
+                    ];
+
 
                 confetti.style.left =
-                    Math.random() * 100 + "vw";
+                    Math.random() * 100
+                    + "vw";
+
 
                 confetti.style.animationDuration =
-                    (2 + Math.random() * 3) + "s";
+                    (
+                        2 +
+                        Math.random() * 3
+                    )
+                    + "s";
+
 
                 confetti.style.fontSize =
-                    (10 + Math.random() * 15) + "px";
+                    (
+                        10 +
+                        Math.random() * 15
+                    )
+                    + "px";
 
-                document.body.appendChild(confetti);
 
-                setTimeout(() => {
-                    confetti.remove();
-                }, 5000);
+                document.body.appendChild(
+                    confetti
+                );
+
+
+                setTimeout(
+                    () => {
+
+                        confetti.remove();
+
+                    },
+                    5000
+                );
+
             }
+
         }
+
 
     </script>
 
+
 </body>
+
 </html>
