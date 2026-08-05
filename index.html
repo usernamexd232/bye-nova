@@ -10,1028 +10,10 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Goodbye, Nova Mae 🌷
-    </title>
+    <title>Goodbye, Nova Mae 🌷</title>
 
-
-    <style>
-
-        /* ========================================
-           RESET
-        ======================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-        body {
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            background: #0f172a;
-
-            color: white;
-
-            min-height: 100vh;
-
-            overflow-x: hidden;
-        }
-
-
-        /* ========================================
-           ANIMATED BACKGROUND
-        ======================================== */
-
-        body::before {
-
-            content: "";
-
-            position: fixed;
-
-            inset: 0;
-
-            background:
-
-                radial-gradient(
-                    circle at 20% 20%,
-                    rgba(236, 72, 153, 0.25),
-                    transparent 30%
-                ),
-
-                radial-gradient(
-                    circle at 80% 30%,
-                    rgba(139, 92, 246, 0.25),
-                    transparent 30%
-                ),
-
-                radial-gradient(
-                    circle at 50% 90%,
-                    rgba(59, 130, 246, 0.20),
-                    transparent 35%
-                );
-
-            z-index: -2;
-        }
-
-
-        .stars {
-
-            position: fixed;
-
-            inset: 0;
-
-            pointer-events: none;
-
-            z-index: -1;
-
-            overflow: hidden;
-        }
-
-
-        .star {
-
-            position: absolute;
-
-            width: 3px;
-
-            height: 3px;
-
-            background: white;
-
-            border-radius: 50%;
-
-            opacity: 0.5;
-
-            animation:
-                twinkle 3s
-                infinite
-                ease-in-out;
-        }
-
-
-        @keyframes twinkle {
-
-            0%,
-            100% {
-
-                opacity: 0.2;
-
-                transform:
-                    scale(1);
-            }
-
-            50% {
-
-                opacity: 1;
-
-                transform:
-                    scale(1.8);
-            }
-        }
-
-
-        /* ========================================
-           MAIN CONTAINER
-        ======================================== */
-
-        .container {
-
-            width:
-                min(950px, 92%);
-
-            margin: auto;
-
-            padding:
-                60px 0;
-        }
-
-
-        /* ========================================
-           HERO
-        ======================================== */
-
-        .hero {
-
-            text-align: center;
-
-            min-height: 90vh;
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-            align-items: center;
-        }
-
-
-        .small-text {
-
-            color: #f9a8d4;
-
-            letter-spacing: 4px;
-
-            text-transform: uppercase;
-
-            font-size: 13px;
-
-            margin-bottom: 20px;
-        }
-
-
-        h1 {
-
-            font-size:
-                clamp(
-                    45px,
-                    10vw,
-                    90px
-                );
-
-            line-height: 1;
-
-            margin-bottom: 25px;
-
-            background:
-
-                linear-gradient(
-                    90deg,
-                    #f9a8d4,
-                    #fef3c7,
-                    #c4b5fd,
-                    #f9a8d4
-                );
-
-            background-size: 300%;
-
-            -webkit-background-clip: text;
-
-            background-clip: text;
-
-            color: transparent;
-
-            animation:
-                gradientMove 6s
-                infinite;
-        }
-
-
-        @keyframes gradientMove {
-
-            0% {
-                background-position: 0%;
-            }
-
-            50% {
-                background-position: 100%;
-            }
-
-            100% {
-                background-position: 0%;
-            }
-        }
-
-
-        .subtitle {
-
-            color: #cbd5e1;
-
-            font-size: 18px;
-
-            max-width: 650px;
-
-            line-height: 1.8;
-        }
-
-
-        /* ========================================
-           OPEN BUTTON
-        ======================================== */
-
-        .open-btn {
-
-            margin-top: 35px;
-
-            border: none;
-
-            padding:
-                15px 30px;
-
-            border-radius: 50px;
-
-            background:
-
-                linear-gradient(
-                    135deg,
-                    #ec4899,
-                    #8b5cf6
-                );
-
-            color: white;
-
-            font-size: 16px;
-
-            cursor: pointer;
-
-            box-shadow:
-
-                0 10px 30px
-                rgba(
-                    236,
-                    72,
-                    153,
-                    0.30
-                );
-
-            transition:
-                0.3s;
-        }
-
-
-        .open-btn:hover {
-
-            transform:
-                translateY(-4px)
-                scale(1.03);
-
-            box-shadow:
-
-                0 15px 40px
-                rgba(
-                    236,
-                    72,
-                    153,
-                    0.45
-                );
-        }
-
-
-        .open-btn:active {
-
-            transform:
-                scale(0.97);
-        }
-
-
-        /* ========================================
-           MESSAGE
-        ======================================== */
-
-        .message {
-
-            display: none;
-
-            animation:
-                appear 1s ease;
-        }
-
-
-        .message.show {
-
-            display: block;
-        }
-
-
-        @keyframes appear {
-
-            from {
-
-                opacity: 0;
-
-                transform:
-                    translateY(40px);
-            }
-
-            to {
-
-                opacity: 1;
-
-                transform:
-                    translateY(0);
-            }
-        }
-
-
-        /* ========================================
-           GLASS CARDS
-        ======================================== */
-
-        .card {
-
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.07
-                );
-
-            border:
-                1px solid
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.12
-                );
-
-            backdrop-filter:
-                blur(15px);
-
-            border-radius: 25px;
-
-            padding: 35px;
-
-            margin-bottom: 30px;
-
-            box-shadow:
-
-                0 20px 60px
-                rgba(
-                    0,
-                    0,
-                    0,
-                    0.25
-                );
-        }
-
-
-        /* ========================================
-           INTRO
-        ======================================== */
-
-        .intro {
-
-            text-align: center;
-        }
-
-
-        .intro-icon {
-
-            font-size: 55px;
-
-            margin-bottom: 20px;
-        }
-
-
-        .intro h2 {
-
-            font-size: 30px;
-
-            margin-bottom: 20px;
-        }
-
-
-        .intro p {
-
-            color: #cbd5e1;
-
-            line-height: 1.9;
-
-            font-size: 17px;
-        }
-
-
-        /* ========================================
-           NOVA PROFILE
-        ======================================== */
-
-        .nova-profile {
-
-            text-align: center;
-
-            padding:
-                45px 25px;
-        }
-
-
-        .nova-photo-wrapper {
-
-            width: 220px;
-
-            height: 220px;
-
-            margin:
-                0 auto 25px;
-
-            padding: 6px;
-
-            border-radius: 50%;
-
-            background:
-
-                linear-gradient(
-                    135deg,
-                    #f9a8d4,
-                    #c4b5fd,
-                    #fef3c7,
-                    #f9a8d4
-                );
-
-            background-size: 300%;
-
-            animation:
-                profileGlow 5s
-                infinite;
-        }
-
-
-        .nova-photo {
-
-            width: 100%;
-
-            height: 100%;
-
-            object-fit: cover;
-
-            border-radius: 50%;
-
-            border:
-                5px solid
-                #0f172a;
-
-            display: block;
-        }
-
-
-        .nova-profile h2 {
-
-            font-size: 30px;
-
-            margin-bottom: 10px;
-        }
-
-
-        .nova-profile p {
-
-            color: #94a3b8;
-
-            font-size: 16px;
-
-            line-height: 1.7;
-        }
-
-
-        @keyframes profileGlow {
-
-            0% {
-
-                background-position:
-                    0%;
-            }
-
-            50% {
-
-                background-position:
-                    100%;
-            }
-
-            100% {
-
-                background-position:
-                    0%;
-            }
-        }
-
-
-        /* ========================================
-           GALLERY
-        ======================================== */
-
-        .gallery-title {
-
-            text-align: center;
-
-            margin-bottom: 10px;
-
-            font-size: 30px;
-        }
-
-
-        .gallery-subtitle {
-
-            text-align: center;
-
-            color: #94a3b8;
-
-            margin-bottom: 30px;
-        }
-
-
-        .gallery {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .photo-card {
-
-            position: relative;
-
-            overflow: hidden;
-
-            border-radius: 20px;
-
-            aspect-ratio: 4 / 3;
-
-            background:
-                #1e293b;
-
-            cursor: pointer;
-
-            transition:
-                0.35s;
-        }
-
-
-        .photo-card:first-child {
-
-            grid-column:
-                span 2;
-
-            aspect-ratio:
-                16 / 9;
-        }
-
-
-        .photo-card img {
-
-            width: 100%;
-
-            height: 100%;
-
-            object-fit: cover;
-
-            display: block;
-
-            transition:
-                0.5s;
-        }
-
-
-        .photo-card::after {
-
-            content:
-                "✨ Team Memory";
-
-            position: absolute;
-
-            left: 15px;
-
-            bottom: 15px;
-
-            padding:
-                8px 14px;
-
-            border-radius: 30px;
-
-            background:
-                rgba(
-                    0,
-                    0,
-                    0,
-                    0.55
-                );
-
-            backdrop-filter:
-                blur(8px);
-
-            font-size: 12px;
-
-            opacity: 0;
-
-            transform:
-                translateY(10px);
-
-            transition:
-                0.3s;
-        }
-
-
-        .photo-card:hover img {
-
-            transform:
-                scale(1.08);
-        }
-
-
-        .photo-card:hover::after {
-
-            opacity: 1;
-
-            transform:
-                translateY(0);
-        }
-
-
-        /* ========================================
-           LETTER
-        ======================================== */
-
-        .letter {
-
-            line-height: 1.9;
-
-            color: #e2e8f0;
-
-            font-size: 17px;
-        }
-
-
-        .letter h2 {
-
-            text-align: center;
-
-            margin-bottom: 30px;
-
-            font-size: 30px;
-        }
-
-
-        .letter p {
-
-            margin-bottom: 20px;
-        }
-
-
-        .highlight {
-
-            color: #f9a8d4;
-
-            font-weight: bold;
-        }
-
-
-        .quote {
-
-            margin:
-                30px 0;
-
-            padding: 25px;
-
-            border-left:
-                4px solid
-                #ec4899;
-
-            background:
-                rgba(
-                    236,
-                    72,
-                    153,
-                    0.08
-                );
-
-            border-radius: 10px;
-
-            font-size: 20px;
-
-            font-style: italic;
-
-            color: #fce7f3;
-
-            text-align: center;
-        }
-
-
-        /* ========================================
-           MEMORY CARDS
-        ======================================== */
-
-        .memories {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 15px;
-
-            margin-top: 25px;
-        }
-
-
-        .memory {
-
-            padding:
-                25px 15px;
-
-            text-align: center;
-
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.05
-                );
-
-            border-radius: 18px;
-
-            transition:
-                0.3s;
-        }
-
-
-        .memory:hover {
-
-            transform:
-                translateY(-8px);
-
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.10
-                );
-        }
-
-
-        .memory .emoji {
-
-            font-size: 35px;
-
-            margin-bottom: 12px;
-        }
-
-
-        .memory h3 {
-
-            font-size: 15px;
-
-            margin-bottom: 7px;
-        }
-
-
-        .memory p {
-
-            font-size: 13px;
-
-            color: #94a3b8;
-
-            line-height: 1.6;
-        }
-
-
-        /* ========================================
-           FINAL MESSAGE
-        ======================================== */
-
-        .ending {
-
-            text-align: center;
-
-            padding:
-                70px 20px;
-        }
-
-
-        .ending h2 {
-
-            font-size:
-                clamp(
-                    30px,
-                    7vw,
-                    55px
-                );
-
-            margin-bottom: 20px;
-        }
-
-
-        .heart {
-
-            font-size: 45px;
-
-            display: inline-block;
-
-            animation:
-                heartbeat 1.5s
-                infinite;
-        }
-
-
-        @keyframes heartbeat {
-
-            0%,
-            100% {
-
-                transform:
-                    scale(1);
-            }
-
-            50% {
-
-                transform:
-                    scale(1.2);
-            }
-        }
-
-
-        .signature {
-
-            margin-top: 30px;
-
-            color: #f9a8d4;
-
-            font-size: 18px;
-        }
-
-
-        /* ========================================
-           FOOTER
-        ======================================== */
-
-        footer {
-
-            text-align: center;
-
-            color: #64748b;
-
-            font-size: 12px;
-
-            padding: 30px;
-        }
-
-
-        /* ========================================
-           CONFETTI
-        ======================================== */
-
-        .confetti {
-
-            position: fixed;
-
-            width: 8px;
-
-            height: 12px;
-
-            top: -20px;
-
-            animation:
-                fall 4s
-                linear
-                forwards;
-
-            z-index: 999;
-        }
-
-
-        @keyframes fall {
-
-            to {
-
-                transform:
-                    translateY(110vh)
-                    rotate(720deg);
-
-                opacity: 0;
-            }
-        }
-
-
-        /* ========================================
-           MOBILE
-        ======================================== */
-
-        @media (max-width: 650px) {
-
-            .container {
-
-                padding:
-                    40px 0;
-            }
-
-
-            .hero {
-
-                min-height:
-                    85vh;
-            }
-
-
-            .card {
-
-                padding:
-                    25px 20px;
-            }
-
-
-            .letter {
-
-                font-size:
-                    16px;
-            }
-
-
-            .nova-photo-wrapper {
-
-                width:
-                    180px;
-
-                height:
-                    180px;
-            }
-
-
-            .gallery {
-
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .photo-card:first-child {
-
-                grid-column:
-                    span 1;
-
-                aspect-ratio:
-                    4 / 3;
-            }
-
-
-            .memories {
-
-                grid-template-columns:
-                    1fr;
-            }
-
-
-            .gallery-title {
-
-                font-size:
-                    25px;
-            }
-
-
-            .letter h2 {
-
-                font-size:
-                    25px;
-            }
-
-        }
-
-    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -1063,18 +45,13 @@
 
         <section class="hero">
 
-
             <div class="small-text">
-
                 From all of us
-
             </div>
 
 
             <h1>
-
                 Goodbye, Nova Mae
-
             </h1>
 
 
@@ -1097,7 +74,6 @@
 
             </button>
 
-
         </section>
 
 
@@ -1118,18 +94,13 @@
 
             <div class="card intro">
 
-
                 <div class="intro-icon">
-
                     🌷
-
                 </div>
 
 
                 <h2>
-
                     To Our Dear Nova Mae
-
                 </h2>
 
 
@@ -1154,7 +125,6 @@
 
                 </p>
 
-
             </div>
 
 
@@ -1165,9 +135,7 @@
 
             <div class="card nova-profile">
 
-
                 <div class="nova-photo-wrapper">
-
 
                     <img
                         src="nova.jpg"
@@ -1175,14 +143,11 @@
                         class="nova-photo"
                     >
 
-
                 </div>
 
 
                 <h2>
-
                     Nova Mae Baloyos 🌷
-
                 </h2>
 
 
@@ -1192,7 +157,6 @@
                     and wonderful part of our team's journey.
 
                 </p>
-
 
             </div>
 
@@ -1204,11 +168,8 @@
 
             <div class="card">
 
-
                 <h2 class="gallery-title">
-
                     Our Memories Together 📸
-
                 </h2>
 
 
@@ -1275,7 +236,6 @@
 
                 </div>
 
-
             </div>
 
 
@@ -1286,11 +246,8 @@
 
             <div class="card letter">
 
-
                 <h2>
-
                     A Message From Your Colleagues 💌
-
                 </h2>
 
 
@@ -1401,7 +358,6 @@
 
                 </p>
 
-
             </div>
 
 
@@ -1412,16 +368,8 @@
 
             <div class="card">
 
-
-                <h2
-                    style="
-                        text-align:center;
-                        margin-bottom:25px;
-                    "
-                >
-
+                <h2 class="memories-title">
                     What We'll Remember 🌷
-
                 </h2>
 
 
@@ -1430,18 +378,13 @@
 
                     <div class="memory">
 
-
                         <div class="emoji">
-
                             😂
-
                         </div>
 
 
                         <h3>
-
                             The Laughter
-
                         </h3>
 
 
@@ -1453,25 +396,19 @@
 
                         </p>
 
-
                     </div>
 
 
 
                     <div class="memory">
 
-
                         <div class="emoji">
-
                             🤝
-
                         </div>
 
 
                         <h3>
-
                             The Teamwork
-
                         </h3>
 
 
@@ -1483,25 +420,19 @@
 
                         </p>
 
-
                     </div>
 
 
 
                     <div class="memory">
 
-
                         <div class="emoji">
-
                             📸
-
                         </div>
 
 
                         <h3>
-
                             The Memories
-
                         </h3>
 
 
@@ -1513,12 +444,10 @@
 
                         </p>
 
-
                     </div>
 
 
                 </div>
-
 
             </div>
 
@@ -1530,18 +459,13 @@
 
             <div class="ending">
 
-
                 <div class="heart">
-
                     ❤️
-
                 </div>
 
 
                 <h2>
-
                     Until We Meet Again
-
                 </h2>
 
 
@@ -1559,7 +483,6 @@
                     — From all of us, your colleagues 🤍
 
                 </div>
-
 
             </div>
 
@@ -1590,7 +513,6 @@
 
     <script>
 
-
         /* ========================================
            CREATE STARS
         ========================================= */
@@ -1599,20 +521,13 @@
             document.getElementById("stars");
 
 
-        for (
-            let i = 0;
-            i < 80;
-            i++
-        ) {
-
+        for (let i = 0; i < 80; i++) {
 
             const star =
                 document.createElement("div");
 
 
-            star.classList.add(
-                "star"
-            );
+            star.classList.add("star");
 
 
             star.style.left =
@@ -1627,9 +542,7 @@
                 Math.random() * 3 + "s";
 
 
-            stars.appendChild(
-                star
-            );
+            stars.appendChild(star);
 
         }
 
@@ -1641,28 +554,20 @@
 
         function openMessage() {
 
-
             const message =
-                document.getElementById(
-                    "message"
-                );
+                document.getElementById("message");
 
 
-            message.classList.add(
-                "show"
-            );
+            message.classList.add("show");
 
 
-            setTimeout(
-                () => {
+            setTimeout(() => {
 
-                    message.scrollIntoView({
-                        behavior: "smooth"
-                    });
+                message.scrollIntoView({
+                    behavior: "smooth"
+                });
 
-                },
-                100
-            );
+            }, 100);
 
 
             createConfetti();
@@ -1677,7 +582,6 @@
 
         function createConfetti() {
 
-
             const symbols = [
 
                 "❤️",
@@ -1690,17 +594,10 @@
             ];
 
 
-            for (
-                let i = 0;
-                i < 35;
-                i++
-            ) {
-
+            for (let i = 0; i < 35; i++) {
 
                 const confetti =
-                    document.createElement(
-                        "div"
-                    );
+                    document.createElement("div");
 
 
                 confetti.classList.add(
@@ -1711,32 +608,28 @@
                 confetti.innerHTML =
                     symbols[
                         Math.floor(
-                            Math.random()
-                            *
+                            Math.random() *
                             symbols.length
                         )
                     ];
 
 
                 confetti.style.left =
-                    Math.random() * 100
-                    + "vw";
+                    Math.random() * 100 + "vw";
 
 
                 confetti.style.animationDuration =
                     (
                         2 +
                         Math.random() * 3
-                    )
-                    + "s";
+                    ) + "s";
 
 
                 confetti.style.fontSize =
                     (
                         10 +
                         Math.random() * 15
-                    )
-                    + "px";
+                    ) + "px";
 
 
                 document.body.appendChild(
@@ -1744,19 +637,15 @@
                 );
 
 
-                setTimeout(
-                    () => {
+                setTimeout(() => {
 
-                        confetti.remove();
+                    confetti.remove();
 
-                    },
-                    5000
-                );
+                }, 5000);
 
             }
 
         }
-
 
     </script>
 
