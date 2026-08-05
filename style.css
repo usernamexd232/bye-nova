@@ -462,6 +462,10 @@ h1 {
    GALLERY
 ======================================== */
 
+.gallery-card {
+    padding: 35px;
+}
+
 .gallery-title {
     text-align: center;
 
@@ -478,21 +482,31 @@ h1 {
     margin-bottom: 30px;
 }
 
+
+/* ========================================
+   PHOTO GRID
+======================================== */
+
 .gallery {
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(3, 1fr);
 
-    gap: 18px;
+    gap: 14px;
 }
+
+
+/* ========================================
+   PHOTO CARD
+======================================== */
 
 .photo-card {
     position: relative;
 
     overflow: hidden;
 
-    border-radius: 20px;
+    border-radius: 16px;
 
     aspect-ratio: 4 / 3;
 
@@ -500,16 +514,13 @@ h1 {
 
     cursor: pointer;
 
-    transition: 0.35s;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
-.photo-card:first-child {
-    grid-column:
-        span 2;
 
-    aspect-ratio:
-        16 / 9;
-}
+/* Image */
 
 .photo-card img {
     width: 100%;
@@ -520,8 +531,12 @@ h1 {
 
     display: block;
 
-    transition: 0.5s;
+    transition:
+        transform 0.5s ease;
 }
+
+
+/* Hover overlay */
 
 .photo-card::after {
     content:
@@ -529,12 +544,11 @@ h1 {
 
     position: absolute;
 
-    left: 15px;
-
-    bottom: 15px;
+    left: 12px;
+    bottom: 12px;
 
     padding:
-        8px 14px;
+        7px 12px;
 
     border-radius: 30px;
 
@@ -549,14 +563,32 @@ h1 {
     backdrop-filter:
         blur(8px);
 
-    font-size: 12px;
+    font-size: 11px;
 
     opacity: 0;
 
     transform:
         translateY(10px);
 
-    transition: 0.3s;
+    transition:
+        0.3s;
+}
+
+
+/* Hover effect */
+
+.photo-card:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        );
 }
 
 .photo-card:hover img {
@@ -570,8 +602,6 @@ h1 {
     transform:
         translateY(0);
 }
-
-
 /* ========================================
    LETTER
 ======================================== */
