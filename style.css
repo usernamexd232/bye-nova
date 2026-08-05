@@ -468,17 +468,13 @@ h1 {
 
 .gallery-title {
     text-align: center;
-
     margin-bottom: 10px;
-
     font-size: 30px;
 }
 
 .gallery-subtitle {
     text-align: center;
-
     color: #94a3b8;
-
     margin-bottom: 30px;
 }
 
@@ -494,6 +490,8 @@ h1 {
         repeat(3, 1fr);
 
     gap: 14px;
+
+    align-items: start;
 }
 
 
@@ -508,8 +506,6 @@ h1 {
 
     border-radius: 16px;
 
-    aspect-ratio: 4 / 3;
-
     background: #1e293b;
 
     cursor: pointer;
@@ -520,35 +516,37 @@ h1 {
 }
 
 
-/* Image */
+/* ========================================
+   IMAGE
+======================================== */
 
 .photo-card img {
     width: 100%;
 
-    height: 100%;
-
-    object-fit: cover;
+    height: auto;
 
     display: block;
+
+    object-fit: contain;
 
     transition:
         transform 0.5s ease;
 }
 
 
-/* Hover overlay */
+/* ========================================
+   HOVER LABEL
+======================================== */
 
 .photo-card::after {
-    content:
-        "✨ Team Memory";
+    content: "✨ Team Memory";
 
     position: absolute;
 
     left: 12px;
     bottom: 12px;
 
-    padding:
-        7px 12px;
+    padding: 7px 12px;
 
     border-radius: 30px;
 
@@ -560,8 +558,7 @@ h1 {
             0.55
         );
 
-    backdrop-filter:
-        blur(8px);
+    backdrop-filter: blur(8px);
 
     font-size: 11px;
 
@@ -570,12 +567,13 @@ h1 {
     transform:
         translateY(10px);
 
-    transition:
-        0.3s;
+    transition: 0.3s;
 }
 
 
-/* Hover effect */
+/* ========================================
+   HOVER EFFECT
+======================================== */
 
 .photo-card:hover {
     transform:
@@ -593,7 +591,7 @@ h1 {
 
 .photo-card:hover img {
     transform:
-        scale(1.08);
+        scale(1.03);
 }
 
 .photo-card:hover::after {
