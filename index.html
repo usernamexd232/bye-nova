@@ -1,942 +1,803 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Goodbye, Nova Mae 🌷</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-</head>
-
-
-<body>
-
-
+  <body>
     <!-- ========================================
          ANIMATED STARS
     ========================================= -->
 
-    <div
-        class="stars"
-        id="stars"
-    ></div>
-
-
+    <div class="stars" id="stars"></div>
 
     <!-- ========================================
          MAIN CONTENT
     ========================================= -->
 
     <main class="container">
-
-
-        <!-- ========================================
+      <!-- ========================================
              HERO SECTION
         ========================================= -->
 
-        <section class="hero">
+      <section class="hero">
+        <div class="small-text">From all of us</div>
 
-            <div class="small-text">
-                From all of us
-            </div>
+        <h1>Goodbye, Nova Mae</h1>
 
+        <p class="subtitle">
+          A little message from your colleagues, filled with appreciation,
+          memories, laughter, and best wishes for your next chapter.
+        </p>
 
-            <h1>
-                Goodbye, Nova Mae
-            </h1>
+        <button class="open-btn" onclick="openMessage()">
+          💌 Open Our Message
+        </button>
+      </section>
 
-
-            <p class="subtitle">
-
-                A little message from your colleagues,
-                filled with appreciation, memories,
-                laughter, and best wishes for your
-                next chapter.
-
-            </p>
-
-
-            <button
-                class="open-btn"
-                onclick="openMessage()"
-            >
-
-                💌 Open Our Message
-
-            </button>
-
-        </section>
-
-
-
-        <!-- ========================================
+      <!-- ========================================
              MESSAGE SECTION
         ========================================= -->
 
-        <section
-            class="message"
-            id="message"
-        >
-
-
-            <!-- ====================================
+      <section class="message" id="message">
+        <!-- ====================================
                  INTRO
             ===================================== -->
 
-            <div class="card intro">
+        <div class="card intro">
+          <div class="intro-icon">🌷</div>
 
-                <div class="intro-icon">
-                    🌷
-                </div>
+          <h2>To Our Dear Nova Mae</h2>
 
+          <p>
+            Saying goodbye to a colleague is never easy, especially to someone
+            who has become part of the everyday moments that make work more
+            enjoyable.
+          </p>
 
-                <h2>
-                    To Our Dear Nova Mae
-                </h2>
+          <br />
 
+          <p>
+            Before you start your next chapter, we wanted to leave you with
+            something from all of us.
+          </p>
+        </div>
 
-                <p>
-
-                    Saying goodbye to a colleague
-                    is never easy, especially to someone
-                    who has become part of the everyday
-                    moments that make work more enjoyable.
-
-                </p>
-
-
-                <br>
-
-
-                <p>
-
-                    Before you start your next chapter,
-                    we wanted to leave you with something
-                    from all of us.
-
-                </p>
-
-            </div>
-
-
-
-            <!-- ====================================
+        <!-- ====================================
                  NOVA'S MAIN PHOTO
             ===================================== -->
 
-            <div class="card nova-profile">
+        <div class="card nova-profile">
+          <div class="nova-photo-wrapper">
+            <img src="nova.jpg" alt="Nova Mae Baloyos" class="nova-photo" />
+          </div>
 
-                <div class="nova-photo-wrapper">
+          <h2>Nova Mae Baloyos 🌷</h2>
 
-                    <img
-                        src="nova.jpg"
-                        alt="Nova Mae Baloyos"
-                        class="nova-photo"
-                    >
+          <p>
+            A valued colleague, teammate, and wonderful part of our team's
+            journey.
+          </p>
+        </div>
 
-                </div>
-
-
-                <h2>
-                    Nova Mae Baloyos 🌷
-                </h2>
-
-
-                <p>
-
-                    A valued colleague, teammate,
-                    and wonderful part of our team's journey.
-
-                </p>
-
-            </div>
-
-
-
-            <!-- ====================================
+        <!-- ====================================
                  TEAM MEMORIES
             ===================================== -->
 
-            <div class="card gallery-card">
-
-                <h2 class="gallery-title">
-                    Our Memories Together 📸
-                </h2>
-
-
-                <p class="gallery-subtitle">
-
-                    35 moments we will always be
-                    happy to remember.
-
-                </p>
-
-
-                <div class="gallery">
-
-
-                    <!-- 1 -->
-                    <div class="photo-card">
-                        <img
-                            src="1.jpeg"
-                            alt="Team Memory 1"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 2 -->
-                    <div class="photo-card">
-                        <img
-                            src="2.jpeg"
-                            alt="Team Memory 2"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 3 -->
-                    <div class="photo-card">
-                        <img
-                            src="3.jpeg"
-                            alt="Team Memory 3"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 4 -->
-                    <div class="photo-card">
-                        <img
-                            src="4.jpeg"
-                            alt="Team Memory 4"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 5 -->
-                    <div class="photo-card">
-                        <img
-                            src="5.jpeg"
-                            alt="Team Memory 5"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 6 -->
-                    <div class="photo-card">
-                        <img
-                            src="6.png"
-                            alt="Team Memory 6"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 7 -->
-                    <div class="photo-card">
-                        <img
-                            src="7.png"
-                            alt="Team Memory 7"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 8 -->
-                    <div class="photo-card">
-                        <img
-                            src="8.png"
-                            alt="Team Memory 8"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 9 -->
-                    <div class="photo-card">
-                        <img
-                            src="9.png"
-                            alt="Team Memory 9"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 10 -->
-                    <div class="photo-card">
-                        <img
-                            src="10.png"
-                            alt="Team Memory 10"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 11 -->
-                    <div class="photo-card">
-                        <img
-                            src="11.png"
-                            alt="Team Memory 11"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 12 -->
-                    <div class="photo-card">
-                        <img
-                            src="12.png"
-                            alt="Team Memory 12"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 13 -->
-                    <div class="photo-card">
-                        <img
-                            src="13.png"
-                            alt="Team Memory 13"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 14 -->
-                    <div class="photo-card">
-                        <img
-                            src="14.png"
-                            alt="Team Memory 14"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 15 -->
-                    <div class="photo-card">
-                        <img
-                            src="15.png"
-                            alt="Team Memory 15"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 16 -->
-                    <div class="photo-card">
-                        <img
-                            src="16.png"
-                            alt="Team Memory 16"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 17 -->
-                    <div class="photo-card">
-                        <img
-                            src="17.png"
-                            alt="Team Memory 17"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 18 -->
-                    <div class="photo-card">
-                        <img
-                            src="18.png"
-                            alt="Team Memory 18"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 19 -->
-                    <div class="photo-card">
-                        <img
-                            src="19.png"
-                            alt="Team Memory 19"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 20 -->
-                    <div class="photo-card">
-                        <img
-                            src="20.png"
-                            alt="Team Memory 20"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 21 -->
-                    <div class="photo-card">
-                        <img
-                            src="21.png"
-                            alt="Team Memory 21"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 22 -->
-                    <div class="photo-card">
-                        <img
-                            src="22.png"
-                            alt="Team Memory 22"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 23 -->
-                    <div class="photo-card">
-                        <img
-                            src="23.jpg"
-                            alt="Team Memory 23"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 24 -->
-                    <div class="photo-card">
-                        <img
-                            src="24.jpg"
-                            alt="Team Memory 24"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 25 -->
-                    <div class="photo-card">
-                        <img
-                            src="25.jpg"
-                            alt="Team Memory 25"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 26 -->
-                    <div class="photo-card">
-                        <img
-                            src="26.png"
-                            alt="Team Memory 26"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 27 -->
-                    <div class="photo-card">
-                        <img
-                            src="27.png"
-                            alt="Team Memory 27"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 28 -->
-                    <div class="photo-card">
-                        <img
-                            src="28.png"
-                            alt="Team Memory 28"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 29 -->
-                    <div class="photo-card">
-                        <img
-                            src="29.png"
-                            alt="Team Memory 29"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 30 -->
-                    <div class="photo-card">
-                        <img
-                            src="30.png"
-                            alt="Team Memory 30"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 31 -->
-                    <div class="photo-card">
-                        <img
-                            src="31.png"
-                            alt="Team Memory 31"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 32 -->
-                    <div class="photo-card">
-                        <img
-                            src="32.png"
-                            alt="Team Memory 32"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 33 -->
-                    <div class="photo-card">
-                        <img
-                            src="33.png"
-                            alt="Team Memory 33"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 34 -->
-                    <div class="photo-card">
-                        <img
-                            src="34.png"
-                            alt="Team Memory 34"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                    <!-- 35 -->
-                    <div class="photo-card">
-                        <img
-                            src="35.png"
-                            alt="Team Memory 35"
-                            loading="lazy"
-                        >
-                    </div>
-
-
-                </div>
-
+        <div class="card gallery-card">
+          <h2 class="gallery-title">Our Memories Together 📸</h2>
+
+          <p class="gallery-subtitle">
+            35 moments we will always be happy to remember.
+          </p>
+
+          <div class="gallery">
+            <!-- 1 -->
+            <div class="photo-card">
+              <img src="1.jpeg" alt="Team Memory 1" loading="lazy" />
             </div>
 
+            <!-- 2 -->
+            <div class="photo-card">
+              <img src="2.jpeg" alt="Team Memory 2" loading="lazy" />
+            </div>
 
+            <!-- 3 -->
+            <div class="photo-card">
+              <img src="3.jpeg" alt="Team Memory 3" loading="lazy" />
+            </div>
 
-            <!-- ====================================
+            <!-- 4 -->
+            <div class="photo-card">
+              <img src="4.jpeg" alt="Team Memory 4" loading="lazy" />
+            </div>
+
+            <!-- 5 -->
+            <div class="photo-card">
+              <img src="5.jpeg" alt="Team Memory 5" loading="lazy" />
+            </div>
+
+            <!-- 6 -->
+            <div class="photo-card">
+              <img src="6.png" alt="Team Memory 6" loading="lazy" />
+            </div>
+
+            <!-- 7 -->
+            <div class="photo-card">
+              <img src="7.png" alt="Team Memory 7" loading="lazy" />
+            </div>
+
+            <!-- 8 -->
+            <div class="photo-card">
+              <img src="8.png" alt="Team Memory 8" loading="lazy" />
+            </div>
+
+            <!-- 9 -->
+            <div class="photo-card">
+              <img src="9.png" alt="Team Memory 9" loading="lazy" />
+            </div>
+
+            <!-- 10 -->
+            <div class="photo-card">
+              <img src="10.png" alt="Team Memory 10" loading="lazy" />
+            </div>
+
+            <!-- 11 -->
+            <div class="photo-card">
+              <img src="11.png" alt="Team Memory 11" loading="lazy" />
+            </div>
+
+            <!-- 12 -->
+            <div class="photo-card">
+              <img src="12.png" alt="Team Memory 12" loading="lazy" />
+            </div>
+
+            <!-- 13 -->
+            <div class="photo-card">
+              <img src="13.png" alt="Team Memory 13" loading="lazy" />
+            </div>
+
+            <!-- 14 -->
+            <div class="photo-card">
+              <img src="14.png" alt="Team Memory 14" loading="lazy" />
+            </div>
+
+            <!-- 15 -->
+            <div class="photo-card">
+              <img src="15.png" alt="Team Memory 15" loading="lazy" />
+            </div>
+
+            <!-- 16 -->
+            <div class="photo-card">
+              <img src="16.png" alt="Team Memory 16" loading="lazy" />
+            </div>
+
+            <!-- 17 -->
+            <div class="photo-card">
+              <img src="17.png" alt="Team Memory 17" loading="lazy" />
+            </div>
+
+            <!-- 18 -->
+            <div class="photo-card">
+              <img src="18.png" alt="Team Memory 18" loading="lazy" />
+            </div>
+
+            <!-- 19 -->
+            <div class="photo-card">
+              <img src="19.png" alt="Team Memory 19" loading="lazy" />
+            </div>
+
+            <!-- 20 -->
+            <div class="photo-card">
+              <img src="20.png" alt="Team Memory 20" loading="lazy" />
+            </div>
+
+            <!-- 21 -->
+            <div class="photo-card">
+              <img src="21.png" alt="Team Memory 21" loading="lazy" />
+            </div>
+
+            <!-- 22 -->
+            <div class="photo-card">
+              <img src="22.png" alt="Team Memory 22" loading="lazy" />
+            </div>
+
+            <!-- 23 -->
+            <div class="photo-card">
+              <img src="23.jpg" alt="Team Memory 23" loading="lazy" />
+            </div>
+
+            <!-- 24 -->
+            <div class="photo-card">
+              <img src="24.jpg" alt="Team Memory 24" loading="lazy" />
+            </div>
+
+            <!-- 25 -->
+            <div class="photo-card">
+              <img src="25.jpg" alt="Team Memory 25" loading="lazy" />
+            </div>
+
+            <!-- 26 -->
+            <div class="photo-card">
+              <img src="26.png" alt="Team Memory 26" loading="lazy" />
+            </div>
+
+            <!-- 27 -->
+            <div class="photo-card">
+              <img src="27.png" alt="Team Memory 27" loading="lazy" />
+            </div>
+
+            <!-- 28 -->
+            <div class="photo-card">
+              <img src="28.png" alt="Team Memory 28" loading="lazy" />
+            </div>
+
+            <!-- 29 -->
+            <div class="photo-card">
+              <img src="29.png" alt="Team Memory 29" loading="lazy" />
+            </div>
+
+            <!-- 30 -->
+            <div class="photo-card">
+              <img src="30.png" alt="Team Memory 30" loading="lazy" />
+            </div>
+
+            <!-- 31 -->
+            <div class="photo-card">
+              <img src="31.png" alt="Team Memory 31" loading="lazy" />
+            </div>
+
+            <!-- 32 -->
+            <div class="photo-card">
+              <img src="32.png" alt="Team Memory 32" loading="lazy" />
+            </div>
+
+            <!-- 33 -->
+            <div class="photo-card">
+              <img src="33.png" alt="Team Memory 33" loading="lazy" />
+            </div>
+
+            <!-- 34 -->
+            <div class="photo-card">
+              <img src="34.png" alt="Team Memory 34" loading="lazy" />
+            </div>
+
+            <!-- 35 -->
+            <div class="photo-card">
+              <img src="35.png" alt="Team Memory 35" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <!-- ====================================
+     VIDEO MEMORIES
+===================================== -->
+
+        <div class="card video-gallery-card">
+          <h2 class="gallery-title">Our Video Memories 🎥</h2>
+
+          <p class="gallery-subtitle">A few more moments worth remembering.</p>
+
+          <div class="video-gallery">
+            <div class="video-card">
+              <video
+                src="vid1.mp4"
+                controls
+                preload="metadata"
+                playsinline
+              ></video>
+
+              <div class="video-title">Memory 1 🎥</div>
+            </div>
+
+            <div class="video-card">
+              <video
+                src="vid2.mp4"
+                controls
+                preload="metadata"
+                playsinline
+              ></video>
+
+              <div class="video-title">Memory 2 🎥</div>
+            </div>
+
+            <div class="video-card">
+              <video
+                src="vid3.mp4"
+                controls
+                preload="metadata"
+                playsinline
+              ></video>
+
+              <div class="video-title">Memory 3 🎥</div>
+            </div>
+
+            <div class="video-card">
+              <video
+                src="vid4.mp4"
+                controls
+                preload="metadata"
+                playsinline
+              ></video>
+
+              <div class="video-title">Memory 4 🎥</div>
+            </div>
+
+            <div class="video-card">
+              <video
+                src="vid5.mp4"
+                controls
+                preload="metadata"
+                playsinline
+              ></video>
+
+              <div class="video-title">Memory 5 🎥</div>
+            </div>
+
+            <div class="video-card">
+              <video
+                src="vid6.mp4"
+                controls
+                preload="metadata"
+                playsinline
+              ></video>
+
+              <div class="video-title">Memory 6 🎥</div>
+            </div>
+
+            <div class="video-card">
+              <video
+                src="vid7.mp4"
+                controls
+                preload="metadata"
+                playsinline
+              ></video>
+
+              <div class="video-title">Memory 7 🎥</div>
+            </div>
+
+            <div class="video-card">
+              <video
+                src="vid8.mp4"
+                controls
+                preload="metadata"
+                playsinline
+              ></video>
+
+              <div class="video-title">Memory 8 🎥</div>
+            </div>
+
+            <div class="video-card">
+              <video
+                src="vid9.mp4"
+                controls
+                preload="metadata"
+                playsinline
+              ></video>
+
+              <div class="video-title">Memory 9 🎥</div>
+            </div>
+
+            <div class="video-card">
+              <video
+                src="vid10.mp4"
+                controls
+                preload="metadata"
+                playsinline
+              ></video>
+
+              <div class="video-title">Memory 10 🎥</div>
+            </div>
+          </div>
+        </div>
+        <!-- ====================================
                  TEAM MESSAGE
             ===================================== -->
 
-            <div class="card letter">
+        <div class="card letter">
+          <h2>A Message From Your Colleagues 💌</h2>
 
-                <h2>
-                    A Message From Your Colleagues 💌
-                </h2>
+          <p>
+            Dear
+            <span class="highlight"> Nova Mae </span>,
+          </p>
 
+          <p>
+            As you move on to a new chapter, we just want to take a moment to
+            say
+            <strong>thank you</strong>.
+          </p>
 
-                <p>
+          <p>
+            Thank you for being part of our team and for sharing so many
+            ordinary days that somehow became memorable. From busy workdays and
+            stressful moments to random conversations, jokes, laughter, and
+            everything in between, those little moments became part of our
+            team's story.
+          </p>
 
-                    Dear
-                    <span class="highlight">
-                        Nova Mae
-                    </span>,
+          <p>
+            Work isn't always easy, but having good people around makes the
+            difficult days lighter. Your presence was one of those things that
+            made the workplace feel a little more familiar and a little more
+            enjoyable.
+          </p>
 
-                </p>
+          <div class="quote">
+            "Good coworkers become good memories, and good memories stay with us
+            long after the work is finished."
+          </div>
 
+          <p>
+            We are genuinely happy for you as you begin this new journey. We
+            hope the next chapter brings you new opportunities, new experiences,
+            and plenty of reasons to be proud of yourself.
+          </p>
 
-                <p>
+          <p>
+            Wherever you go next, we hope you meet people who appreciate your
+            efforts, support your dreams, and make you feel that you're exactly
+            where you're supposed to be.
+          </p>
 
-                    As you move on to a new chapter,
-                    we just want to take a moment to say
-                    <strong>thank you</strong>.
+          <p>
+            And even though you won't be working beside us anymore, the memories
+            we've made together will always be part of the team.
+          </p>
 
-                </p>
+          <p>
+            So this isn't really a goodbye to the memories. It's simply a
+            <strong>"see you around"</strong>
+            and a wish that life treats you kindly wherever you go.
+          </p>
 
+          <p>
+            <strong>
+              Thank you for being part of our team, Nova Mae. You will
+              definitely be missed.
+            </strong>
+          </p>
+        </div>
 
-                <p>
-
-                    Thank you for being part of our team
-                    and for sharing so many ordinary days
-                    that somehow became memorable.
-                    From busy workdays and stressful moments
-                    to random conversations, jokes, laughter,
-                    and everything in between, those little
-                    moments became part of our team's story.
-
-                </p>
-
-
-                <p>
-
-                    Work isn't always easy, but having good
-                    people around makes the difficult days
-                    lighter. Your presence was one of those
-                    things that made the workplace feel a
-                    little more familiar and a little more
-                    enjoyable.
-
-                </p>
-
-
-                <div class="quote">
-
-                    "Good coworkers become good memories,
-                    and good memories stay with us long
-                    after the work is finished."
-
-                </div>
-
-
-                <p>
-
-                    We are genuinely happy for you as you
-                    begin this new journey. We hope the next
-                    chapter brings you new opportunities,
-                    new experiences, and plenty of reasons
-                    to be proud of yourself.
-
-                </p>
-
-
-                <p>
-
-                    Wherever you go next, we hope you meet
-                    people who appreciate your efforts,
-                    support your dreams, and make you feel
-                    that you're exactly where you're supposed
-                    to be.
-
-                </p>
-
-
-                <p>
-
-                    And even though you won't be working
-                    beside us anymore, the memories we've
-                    made together will always be part of
-                    the team.
-
-                </p>
-
-
-                <p>
-
-                    So this isn't really a goodbye to the
-                    memories. It's simply a
-                    <strong>"see you around"</strong>
-                    and a wish that life treats you kindly
-                    wherever you go.
-
-                </p>
-
-
-                <p>
-
-                    <strong>
-
-                        Thank you for being part of our team,
-                        Nova Mae. You will definitely be missed.
-
-                    </strong>
-
-                </p>
-
-            </div>
-
-
-
-            <!-- ====================================
+        <!-- ====================================
                  WHAT WE'LL REMEMBER
             ===================================== -->
 
-            <div class="card">
+        <div class="card">
+          <h2 class="memories-title">What We'll Remember 🌷</h2>
 
-                <h2 class="memories-title">
-                    What We'll Remember 🌷
-                </h2>
+          <div class="memories">
+            <div class="memory">
+              <div class="emoji">😂</div>
 
+              <h3>The Laughter</h3>
 
-                <div class="memories">
-
-
-                    <div class="memory">
-
-                        <div class="emoji">
-                            😂
-                        </div>
-
-                        <h3>
-                            The Laughter
-                        </h3>
-
-                        <p>
-
-                            The random jokes and moments
-                            that made ordinary workdays
-                            more fun.
-
-                        </p>
-
-                    </div>
-
-
-
-                    <div class="memory">
-
-                        <div class="emoji">
-                            🤝
-                        </div>
-
-                        <h3>
-                            The Teamwork
-                        </h3>
-
-                        <p>
-
-                            The days we helped one another
-                            get through whatever work
-                            brought us.
-
-                        </p>
-
-                    </div>
-
-
-
-                    <div class="memory">
-
-                        <div class="emoji">
-                            📸
-                        </div>
-
-                        <h3>
-                            The Memories
-                        </h3>
-
-                        <p>
-
-                            The simple moments that became
-                            memories we'll look back on
-                            someday.
-
-                        </p>
-
-                    </div>
-
-
-                </div>
-
+              <p>
+                The random jokes and moments that made ordinary workdays more
+                fun.
+              </p>
             </div>
 
+            <div class="memory">
+              <div class="emoji">🤝</div>
 
+              <h3>The Teamwork</h3>
 
-            <!-- ====================================
+              <p>
+                The days we helped one another get through whatever work brought
+                us.
+              </p>
+            </div>
+
+            <div class="memory">
+              <div class="emoji">📸</div>
+
+              <h3>The Memories</h3>
+
+              <p>
+                The simple moments that became memories we'll look back on
+                someday.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====================================
                  FINAL FAREWELL
             ===================================== -->
 
-            <div class="ending">
+        <div class="ending">
+          <div class="heart">❤️</div>
 
-                <div class="heart">
-                    ❤️
-                </div>
+          <h2>Until We Meet Again</h2>
 
+          <p class="subtitle">
+            Wherever your next journey takes you, we wish you nothing but
+            success, happiness, and wonderful new memories.
+          </p>
 
-                <h2>
-                    Until We Meet Again
-                </h2>
-
-
-                <p class="subtitle">
-
-                    Wherever your next journey takes you,
-                    we wish you nothing but success,
-                    happiness, and wonderful new memories.
-
-                </p>
-
-
-                <div class="signature">
-
-                    — From all of us, your colleagues 🤍
-
-                </div>
-
-            </div>
-
-
-        </section>
-
-
+          <div class="signature">— From all of us, your colleagues 🤍</div>
+        </div>
+      </section>
     </main>
+    <!-- ====================================
+     FINAL TEAM PHOTO
+===================================== -->
 
+    <div class="final-team-section">
+      <div class="final-team-heading">
+        <span>🌷</span>
+        <h2>One Last Memory Together</h2>
+        <span>🌷</span>
+      </div>
 
+      <p class="final-team-subtitle">
+        One picture, many memories, and a team we'll always remember.
+      </p>
 
+      <div class="final-team-image-wrapper">
+        <img src="team.png" alt="Our team together" class="final-team-image" />
+      </div>
+
+      <div class="creator-credit">
+        <span>Made by</span>
+        <strong>Jani</strong>
+      </div>
+    </div>
     <!-- ========================================
          FOOTER
     ========================================= -->
 
-    <footer>
+    <footer>Made with appreciation, friendship, and good memories.</footer>
+    <!-- ========================================
+     IMAGE LIGHTBOX
+======================================== -->
 
-        Made with appreciation, friendship,
-        and good memories.
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="Close image"
+      >
+        ✕
+      </button>
 
-    </footer>
+      <button
+        class="lightbox-prev"
+        id="lightboxPrev"
+        aria-label="Previous image"
+      >
+        ‹
+      </button>
 
+      <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="Expanded team memory" />
 
+        <div class="lightbox-counter" id="lightboxCounter">1 / 35</div>
+      </div>
 
+      <button class="lightbox-next" id="lightboxNext" aria-label="Next image">
+        ›
+      </button>
+    </div>
     <!-- ========================================
          JAVASCRIPT
     ========================================= -->
 
     <script>
+      /* ========================================
+       CREATE STARS
+    ======================================== */
 
-        /* ========================================
-           CREATE STARS
-        ========================================= */
+      const stars = document.getElementById("stars");
 
-        const stars =
-            document.getElementById("stars");
+      for (let i = 0; i < 80; i++) {
+        const star = document.createElement("div");
 
+        star.classList.add("star");
 
-        for (let i = 0; i < 80; i++) {
+        star.style.left = Math.random() * 100 + "%";
 
-            const star =
-                document.createElement("div");
+        star.style.top = Math.random() * 100 + "%";
 
-            star.classList.add("star");
+        star.style.animationDelay = Math.random() * 3 + "s";
 
-            star.style.left =
-                Math.random() * 100 + "%";
+        stars.appendChild(star);
+      }
 
-            star.style.top =
-                Math.random() * 100 + "%";
+      /* ========================================
+       OPEN MESSAGE
+    ======================================== */
 
-            star.style.animationDelay =
-                Math.random() * 3 + "s";
+      function openMessage() {
+        const message = document.getElementById("message");
 
-            stars.appendChild(star);
+        message.classList.add("show");
 
+        setTimeout(() => {
+          message.scrollIntoView({
+            behavior: "smooth",
+          });
+        }, 100);
+
+        createConfetti();
+      }
+
+      /* ========================================
+       CREATE CONFETTI
+    ======================================== */
+
+      function createConfetti() {
+        const symbols = ["❤️", "✨", "🌸", "💗", "⭐", "🌷"];
+
+        for (let i = 0; i < 35; i++) {
+          const confetti = document.createElement("div");
+
+          confetti.classList.add("confetti");
+
+          confetti.innerHTML =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+          confetti.style.left = Math.random() * 100 + "vw";
+
+          confetti.style.animationDuration = 2 + Math.random() * 3 + "s";
+
+          confetti.style.fontSize = 10 + Math.random() * 15 + "px";
+
+          document.body.appendChild(confetti);
+
+          setTimeout(() => {
+            confetti.remove();
+          }, 5000);
+        }
+      }
+
+      /* ========================================
+       IMAGE LIGHTBOX
+    ======================================== */
+
+      const galleryImages = document.querySelectorAll(".photo-card img");
+
+      const lightbox = document.getElementById("lightbox");
+
+      const lightboxImage = document.getElementById("lightboxImage");
+
+      const lightboxCounter = document.getElementById("lightboxCounter");
+
+      const lightboxClose = document.getElementById("lightboxClose");
+
+      const lightboxPrev = document.getElementById("lightboxPrev");
+
+      const lightboxNext = document.getElementById("lightboxNext");
+
+      let currentImage = 0;
+
+      /* ========================================
+       OPEN IMAGE
+    ======================================== */
+
+      function openLightbox(index) {
+        currentImage = index;
+
+        updateLightbox();
+
+        lightbox.classList.add("show");
+
+        lightbox.setAttribute("aria-hidden", "false");
+
+        document.body.style.overflow = "hidden";
+      }
+
+      /* ========================================
+       UPDATE IMAGE
+    ======================================== */
+
+      function updateLightbox() {
+        const image = galleryImages[currentImage];
+
+        lightboxImage.src = image.src;
+
+        lightboxImage.alt = image.alt;
+
+        lightboxCounter.textContent = `${currentImage + 1} / ${galleryImages.length}`;
+      }
+
+      /* ========================================
+       CLOSE LIGHTBOX
+    ======================================== */
+
+      function closeLightbox() {
+        lightbox.classList.remove("show");
+
+        lightbox.setAttribute("aria-hidden", "true");
+
+        document.body.style.overflow = "";
+      }
+
+      /* ========================================
+       NEXT IMAGE
+    ======================================== */
+
+      function nextImage() {
+        currentImage++;
+
+        if (currentImage >= galleryImages.length) {
+          currentImage = 0;
         }
 
+        updateLightbox();
+      }
 
+      /* ========================================
+       PREVIOUS IMAGE
+    ======================================== */
 
-        /* ========================================
-           OPEN MESSAGE
-        ========================================= */
+      function previousImage() {
+        currentImage--;
 
-        function openMessage() {
-
-            const message =
-                document.getElementById("message");
-
-            message.classList.add("show");
-
-
-            setTimeout(() => {
-
-                message.scrollIntoView({
-                    behavior: "smooth"
-                });
-
-            }, 100);
-
-
-            createConfetti();
-
+        if (currentImage < 0) {
+          currentImage = galleryImages.length - 1;
         }
 
+        updateLightbox();
+      }
 
+      /* ========================================
+       CLICK GALLERY IMAGES
+    ======================================== */
 
-        /* ========================================
-           CREATE CONFETTI
-        ========================================= */
+      galleryImages.forEach((image, index) => {
+        image.addEventListener("click", () => {
+          openLightbox(index);
+        });
+      });
 
-        function createConfetti() {
+      /* ========================================
+       BUTTONS
+    ======================================== */
 
-            const symbols = [
+      lightboxClose.addEventListener("click", closeLightbox);
 
-                "❤️",
-                "✨",
-                "🌸",
-                "💗",
-                "⭐",
-                "🌷"
+      lightboxNext.addEventListener("click", nextImage);
 
-            ];
+      lightboxPrev.addEventListener("click", previousImage);
 
+      /* ========================================
+       CLICK OUTSIDE IMAGE
+    ======================================== */
 
-            for (let i = 0; i < 35; i++) {
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
 
-                const confetti =
-                    document.createElement("div");
+      /* ========================================
+       KEYBOARD CONTROLS
+    ======================================== */
 
-
-                confetti.classList.add(
-                    "confetti"
-                );
-
-
-                confetti.innerHTML =
-                    symbols[
-                        Math.floor(
-                            Math.random() *
-                            symbols.length
-                        )
-                    ];
-
-
-                confetti.style.left =
-                    Math.random() * 100 + "vw";
-
-
-                confetti.style.animationDuration =
-                    (
-                        2 +
-                        Math.random() * 3
-                    ) + "s";
-
-
-                confetti.style.fontSize =
-                    (
-                        10 +
-                        Math.random() * 15
-                    ) + "px";
-
-
-                document.body.appendChild(
-                    confetti
-                );
-
-
-                setTimeout(() => {
-
-                    confetti.remove();
-
-                }, 5000);
-
-            }
-
+      document.addEventListener("keydown", (event) => {
+        if (!lightbox.classList.contains("show")) {
+          return;
         }
 
+        if (event.key === "Escape") {
+          closeLightbox();
+        }
+
+        if (event.key === "ArrowRight") {
+          nextImage();
+        }
+
+        if (event.key === "ArrowLeft") {
+          previousImage();
+        }
+      });
     </script>
-
-
-</body>
-
+  </body>
 </html>
